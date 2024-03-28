@@ -35,6 +35,7 @@
   ]
 </script>
 <template>
+  <h1 class="mb-4">Ответы на вопросы</h1>
   <div class="accordion mb-4" id="accordionLesson">
     <div v-for="(accItem, key) in answersData" :key="key" class="accordion-item">
       <h2 class="accordion-header" :id="'heading'+ key">

@@ -19,6 +19,18 @@
     <li>Сотрудничество образовательной организации и предприятий.</li>
     <li>Развитие технологического суверенитета страны.</li>
   </ul>
+<!--  <h2 class="text-success">О сетевой форме реализации образовательных программ в рамках курсов внеурочной деятельности</h2>
+  <div class="promo p-2">
+    <iframe
+        class="promo-media"
+        src="https://www.youtube.com/embed/iy154YHnNZU?si=MiLzPXgAg1vJ1rtN"
+        title="О сетевой форме реализации образовательных программ в рамках курсов внеурочной деятельности"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+    ></iframe>
+  </div>
+  <h2 class="text-success">О возможностях партнёров</h2>-->
   <div class="row">
     <div class="col-lg-4 col-md-6">
       <iframe
