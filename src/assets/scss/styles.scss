@@ -1,0 +1,220 @@
+@import "bootstrap-conf";
+.header{
+  .dropdown-menu {
+    display: none;
+  }
+  .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .logo {
+    height: 100px;
+  }
+  .logo2 {
+    height: 60px;
+  }
+  .nav-link {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+.main {
+  position: relative;
+  * {
+    color: $primary;
+  }
+  .title-section {
+    @media (min-width: 992px) {
+      &{
+        position: relative;
+      }
+      &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        transform: rotate(-5deg);
+        width: 100px;
+        height: 100px;
+        background-image: url('/ovl.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &::after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background-image: url('/ring.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .broadcast,
+  .promo {
+    width: 100%;
+  }
+  .broadcast-media,
+  .timer,
+  .promo-media {
+   width: 100%;
+   height: 100%;
+  }
+  .broadcast-with-video,
+  .promo-media
+  {
+    height: clamp(45vw, 5vh, 30vw);
+  }
+  .broadcast-media,
+  .promo-media
+  {
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      font-size: calc(1.5em + 1vw);
+    }
+  }
+  &::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/piter.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+  }
+}
+.footer {
+  *{
+    color: $light;
+  }
+  padding: 10px;
+  background: $primary;
+  .partner {
+    height: 120%;
+    .swiper-pagination-bullet {
+      border-radius: unset;
+      width: 24px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $success;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      height: 210px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide a {
+      margin: 5%;
+    }
+    .swiper-slide img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+      background-position: center;
+    }
+
+    @media (max-width: 967px) {
+      .swiper-slide {
+        width: calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 479px) {
+      .swiper-slide {
+        width: calc(100% - 10px);
+      }
+    }
+  }
+
+  .social {
+    a {
+      display:block;
+      width: 50px;
+      height: 50px;
+      img {
+        width: 100%;
+        height: auto
+      }
+    }
+  }
+}
+.table#program{
+  * {
+    background: rgba(0,0,0,0);
+    color: $primary;
+  }
+  thead {
+   th {
+    color: $success;
+   }
+ }
+  @media (min-width: 576px) {
+    .first-col {
+      width: 105px;
+    }
+    .sm-offset-col {
+      display: table-cell;
+    }
+  }
+}
+.hover-success:hover, .hover-success:active {
+  color: $success !important;
+  border-color: $success !important;
+  background: transparent !important;
+}
+.accordion-button {
+  color: $success;
+}
+.video-three-col{
+  width: 100%;
+  height: 15vw;
+  @media (max-width: 768px) {
+    & {
+      height: 40vw;
+    }
+  }
+}
+.video-right {
+  @media (max-width: 992px) {
+    & {
+      height: 40vw;
+    }
+  }
+}
+.video-two-col {
+  width: 100%;
+  height: 25vw;
+  @media (max-width: 768px) {
+    & {
+      height: 40vw;
+    }
+  }
+}
