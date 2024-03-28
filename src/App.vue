@@ -83,7 +83,7 @@ import 'swiper/css/grid';
             Почта: <a href="mailto:eduforum@licey369.ru?subject=Обращение%20с%20сайта&amp;body=Здравствуйте">eduforum@licey369.ru</a>
           </div>
           <div>
-            Телефон: <a href="tel:+78122468990" >(812) 246-89-90, 8007</a>
+            Телефон: <a href="tel:+78122468990p8007" >(812) 246-89-90, 8007</a>
           </div>
           <div>
             Адрес: 198330, Санкт-Петербург, ул. Маршала Захарова, д. 58
