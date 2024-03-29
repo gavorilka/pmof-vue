@@ -16,17 +16,20 @@
     <li>О нормативной правовой основе осуществления образовательной деятельности.</li>
     <li>О портрете современного урока.</li>
   </ul>
-  <div class="row mt-4">
+  <div class="row mt-4 row-gap-4">
     <div v-for="(item, key) in contentData" :key="key" class="col-md-6">
-      <iframe
-          class="video-two-col"
-          :src="item.src"
-          :title="item.title"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-      >
-      </iframe>
+      <div class="frame-block">
+        <iframe
+            :src="item.src"
+            :title="item.title"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            width="560"
+            height="315"
+        >
+        </iframe>
+      </div>
     </div>
   </div>
 </template>
