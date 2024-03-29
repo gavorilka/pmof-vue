@@ -91,18 +91,18 @@ import 'swiper/css/grid';
         </address>
         <div class="col-md-6 px-5">
           <iframe
-              style="width: 80%; height: 235px;"
+              class="map"
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A4730123501ab88bffc8b2e671815b05bea6421b6b855355ceef622d3872d936d&amp;source=constructor"
           >
           </iframe>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-8 partner">
-        <h3 class="text-center mt-2">Партнёры</h3>
+    <div class="row pt-3">
+      <div class="col-md-8 partner px-0">
+        <h3 class="text-md-start px-5 mt-2">Партнёры</h3>
         <Swiper
-            class="partnerSwiper"
+            class="partnerSwiper px-1"
             :modules="[ Autoplay ,Grid, Pagination]"
             :loop="true"
             :autoplay = "{
@@ -180,3 +180,29 @@ import 'swiper/css/grid';
     </div>
   </footer>
 </template>
+<style scoped lang="scss">
+  .map {
+    width: 70%;
+    height: 235px;
+    @media (max-width: 1080px) {
+      & {
+        width: 80%;
+      }
+    }
+    @media (max-width: 920px) {
+      & {
+        width: 90%;
+      }
+    }
+    @media (max-width: 768px) {
+      & {
+        width: 70%;
+      }
+    }
+    @media (max-width: 576px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+</style>
