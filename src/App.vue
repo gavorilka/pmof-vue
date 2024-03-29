@@ -6,6 +6,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
 
+const partnerLogo = [
+    {src:"/partners/tegratech.svg", title:"Tegratech", link:"https://xn--80affcz7ale.xn--p1ai"},
+    {src:"/partners/Eljur_logo.svg", title:"ООО «Веб-Мост»", link:"https://eljur.ru"},
+    {src:"/partners/pelikan_logo.svg", title:"ЗАО «ВИЗАРДСОФТ»", link:"https://pelikan.online"},
+    {src:"/partners/MEO_Logo.svg", title:"ООО «Мобильное Электронное Образование»", link:"https://mob-edu.ru"},
+    {src:"/partners/ModumLab.svg", title:"ModumLab", link:"https://modumlab.com"},
+    {src:"/partners/VectorLogo.svg", title:"ООО«Вектор»", link:"https://vector-ld.ru"},
+    //{src:"", title:"", link:""},
+]
 </script>
 
 <template>
@@ -16,13 +25,13 @@ import 'swiper/css/grid';
           <img src="/logoPfom.svg" class="img-fluid logo" alt="Петербургский международный образовательный форум">
         </a>
         <a class="navbar-brand d-none d-sm-block" href="https://xn--2024-u4d6b7a9f1a.xn--p1ai" target="_blank">
-          <img src="/logoYearFamily.svg" class="img-fluid logo2" alt="Год семьи">
+          <img src="/logoYearFamily.svg" class="img-fluid logo-small" alt="Год семьи">
         </a>
         <a class="navbar-brand d-sm-none" href="https://xn--2024-u4d6b7a9f1a.xn--p1ai" target="_blank">
-          <img src="/shortLogoYearFamily.svg" class="img-fluid logo2" alt="Год семьи">
+          <img src="/shortLogoYearFamily.svg" class="img-fluid logo-small" alt="Год семьи">
         </a>
         <a class="navbar-brand" href="https://licey369.ru/" target="_blank">
-          <img src="/logoBlue.svg" class="img-fluid logo2" alt="Лицей №&nbsp;369">
+          <img src="/logoBlue.svg" class="img-fluid logo-small" alt="Лицей №&nbsp;369">
         </a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,36 +132,11 @@ import 'swiper/css/grid';
               clickable: true,
             }"
         >
-            <SwiperSlide>
-              <a href="https://xn--80affcz7ale.xn--p1ai" target="_blank">
-                <img src="/partners/tegratech.svg" alt="Tegratech" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="https://eljur.ru" target="_blank">
-                <img src="/partners/Eljur_logo.svg" alt="ООО «Веб-Мост»" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="https://pelikan.online" target="_blank">
-                <img src="/partners/pelikan_logo.svg" alt="ЗАО «ВИЗАРДСОФТ»" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="https://mob-edu.ru" target="_blank">
-                <img src="/partners/MEO_Logo.svg" alt="ООО «Мобильное Электронное Образование»" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="https://modumlab.com" target="_blank">
-                <img src="/partners/ModumLab.svg" alt="ModumLab" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide class="swiper-slide">
-              <a href="https://vector-ld.ru" target="_blank">
-                <img src="/partners/VectorLogo.svg" alt="ООО«Вектор»" />
-              </a>
-            </SwiperSlide>
+          <SwiperSlide v-for=" (item, key) in partnerLogo" :key="key">
+            <a :href="item.link" target="_blank">
+              <img :src="item.src" :alt="item.title" />
+            </a>
+          </SwiperSlide>
         </Swiper>
       </div>
       <div class="col-md-4 d-flex justify-content-between align-items-center flex-wrap d-md-block">

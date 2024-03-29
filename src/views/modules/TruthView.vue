@@ -8,15 +8,19 @@
     <li>О значении образовательной среды для тех, кто учится, и возможностях, которые она им предоставляет.</li>
     <li>О показателях качества знаний обучающихся.</li>
   </ul>
-  <div class="promo pt-2">
-    <iframe
-        class="promo-media"
-        src="https://www.youtube.com/embed/kf6DU22KYNA?si=klVIERA5sevkQfkn"
-        title="#PROЛицей369_ГЛАЗАМИ_УЧАЩИХСЯ"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-    ></iframe>
+  <div class="pt-2">
+    <div class="frame-block">
+      <iframe
+          src="https://www.youtube.com/embed/kf6DU22KYNA?si=klVIERA5sevkQfkn"
+          title="#PROЛицей369_ГЛАЗАМИ_УЧАЩИХСЯ"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          width="560"
+          height="315"
+      ></iframe>
+    </div>
   </div>
 </template>
 

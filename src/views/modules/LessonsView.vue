@@ -99,14 +99,16 @@ const contentData = [
           <div><strong>Тема урока: </strong>Проблемы окружающей среды</div>
           <div><strong>Учитель: </strong>Кинслер Екатерина Владимировна</div>
           <div><strong>Класс: </strong>9</div>
-          <div class="promo">
+          <div class="frame-block">
             <iframe
-                class="promo-media"
                 src="https://www.youtube.com/embed/0U0oDvqntgo?si=kaYxnnWMdni5uuPU"
                 title="#PROурокИНОСТРАННОГО_ЯЗЫКА"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                width="560"
+                height="315"
             ></iframe>
           </div>
         </div>
@@ -132,14 +134,16 @@ const contentData = [
                   <div><strong>Тема урока: </strong>Технологии обработки пищевых продуктов</div>
                   <div><strong>Учитель: </strong>Дымбовская Светлана Николаевна</div>
                   <div><strong>Класс: </strong>6</div>
-                  <div class="promo">
+                  <div class="frame-block">
                     <iframe
-                        class="promo-media"
                         src="https://www.youtube.com/embed/wFXkMmf2Bhs?si=2WtxSA_6WJKxCzct"
                         title="Урок технологии (мастерская домоводства)"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        width="560"
+                        height="315"
                     ></iframe>
                   </div>
                 </div>
@@ -156,14 +160,16 @@ const contentData = [
                   <div><strong>Тема урока: </strong>Технологические операции по пошиву изделия. Оценка качества шейного изделия</div>
                   <div><strong>Учитель: </strong>Ярыгина Наталья Викторовна</div>
                   <div><strong>Класс: </strong>5</div>
-                  <div class="promo">
+                  <div class="frame-block">
                     <iframe
-                        class="promo-media"
                         src="https://www.youtube.com/embed/irNL5k25BQM?si=UuaWjCBzt5TJ8S77"
                         title="Урок технологии (мастерская по обработке тканей)"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        width="560"
+                        height="315"
                     ></iframe>
                   </div>
                 </div>
@@ -180,14 +186,16 @@ const contentData = [
                   <div><strong>Тема урока: </strong>Технологии обработки конструкционных материалов</div>
                   <div><strong>Учитель: </strong>Муртаев Алишер Нурханжанович</div>
                   <div><strong>Класс: </strong>6</div>
-                  <div class="promo">
+                  <div class="frame-block">
                     <iframe
-                        class="promo-media"
                         src="https://www.youtube.com/embed/fbStHCJq4-U?si=YOrDkKXPsR-VFJ_L"
                         title="Урок технологии (мастерская по деревообработке)"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        width="560"
+                        height="315"
                     ></iframe>
                   </div>
                 </div>
@@ -198,17 +206,21 @@ const contentData = [
       </div>
     </div>
   </div>
-  <div class="row mt-4">
+  <div class="row mt-4 row-gap-4">
     <div v-for="(item, key) in contentData" :key="key" class="col-md-6">
-      <iframe
-          class="video-two-col"
-          :src="item.src"
-          :title="item.title"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-      >
-      </iframe>
+      <div class="frame-block">
+        <iframe
+            :src="item.src"
+            :title="item.title"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            width="560"
+            height="315"
+        >
+        </iframe>
+      </div>
+
     </div>
   </div>
 </template>

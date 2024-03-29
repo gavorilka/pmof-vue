@@ -9,29 +9,17 @@
     </h1>
   </section>
   <section class="mt-5">
-    <div class="promo">
+    <div class="frame-block">
       <iframe
-          class="promo-media"
           src="https://www.youtube.com/embed/cniC9lZQEAo?si=Hh9dOqJqvSjHr46D?playlist=cniC9lZQEAo?si=Hh9dOqJqvSjHr46D&autoplay=1&mute=1&loop=1"
           title="Пять новелл петербургского образования. #PROЛицей"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
+          width="560"
+          height="315"
       >
       </iframe>
     </div>
   </section>
-<!--  <section class="broadcast">-->
-<!--    <iframe-->
-<!--        class="broadcast-media overflow-hidden d-none"-->
-<!--        src="https://www.youtube.com/embed/Vflv5rpMEKo?si=Kth_Bxf74OtNtGw7"-->
-<!--        frameborder="0"-->
-<!--        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-<!--        title="Трансляция Форума"-->
-<!--        allowfullscreen-->
-<!--    >-->
-<!--    </iframe>-->
-<!--    <div class="timer">-->
-<!--    </div>-->
-<!--  </section>-->
 </template>

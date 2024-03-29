@@ -45,15 +45,19 @@
       </h2>
       <div :id="'collapse'+key" class="accordion-collapse collapse" :aria-labelledby="'heading'+key" data-bs-parent="#accordionLesson">
         <div class="accordion-body">
-          <div class="promo p-2">
-            <iframe
-                class="promo-media"
-                :src="accItem.src"
-                :title="accItem.title"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-            ></iframe>
+          <div class="p-2">
+            <div class="frame-block">
+              <iframe
+                  :src="accItem.src"
+                  :title="accItem.title"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  width="560"
+                  height="315"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
