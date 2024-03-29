@@ -1,6 +1,7 @@
 <script setup>
 const contentData = [
   {src:"https://www.youtube.com/embed/1Vd5Lv-skvg?si=8VnBXcKFHtpgAhdg", title:"«Об информатизации образования», Кирилова В.А., заместитель директора по информатизации, Лицей № 369"},
+  {src:"https://www.youtube.com/embed/NeFvy3QF-lk?si=tKOrOKioJE14-2Kn", title: "ПМОФ 2024 ProЦели"}
   //{src:"", title:""},
 ]
 </script>

@@ -8,16 +8,18 @@
       <div>«Пять новелл петербургского образования. #PROЛицей»</div>
     </h1>
   </section>
-  <section class="promo mt-5">
-    <iframe
-        class="promo-media"
-        src="https://www.youtube.com/embed/cniC9lZQEAo?si=Hh9dOqJqvSjHr46D?playlist=cniC9lZQEAo?si=Hh9dOqJqvSjHr46D&autoplay=1&mute=1&loop=1"
-        title="Пять новелл петербургского образования. #PROЛицей"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-    >
-    </iframe>
+  <section class="mt-5">
+    <div class="promo">
+      <iframe
+          class="promo-media"
+          src="https://www.youtube.com/embed/cniC9lZQEAo?si=Hh9dOqJqvSjHr46D?playlist=cniC9lZQEAo?si=Hh9dOqJqvSjHr46D&autoplay=1&mute=1&loop=1"
+          title="Пять новелл петербургского образования. #PROЛицей"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+      >
+      </iframe>
+    </div>
   </section>
 <!--  <section class="broadcast">-->
 <!--    <iframe-->

@@ -1,9 +1,17 @@
 <script setup>
-
+const contentData = [
+  {src:"https://www.youtube.com/embed/cquE-PRpFvQ?si=ML3A39xPoYQ1QyzM", title:"Инструкция пеликан"},
+  //{src:"", title:""},
+]
 </script>
 
 <template>
   <h1 class="mb-4">Модуль «#PROурок»</h1>
+  <ul>
+    <li>Об отдельных методических подходах, используемых в Лицее №&nbsp;369.</li>
+    <li>Об использовании цифровых устройств, сервисов и ресурсов в образовательном процессе.</li>
+    <li>Об использовании специализированного оборудования при изучении предметов естественно-научной направленности.</li>
+  </ul>
   <div class="accordion mb-4" id="accordionLesson">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
@@ -190,23 +198,17 @@
       </div>
     </div>
   </div>
-  <div class="row flex-wrap-reverse">
-    <div class="col-lg-8">
-      <ul>
-        <li>Об отдельных методических подходах, используемых в Лицее №&nbsp;369.</li>
-        <li>Об использовании цифровых устройств, сервисов и ресурсов в образовательном процессе.</li>
-        <li>Об использовании специализированного оборудования при изучении предметов естественно-научной направленности.</li>
-      </ul>
-    </div>
-    <div class="col-lg-4">
+  <div class="row mt-4">
+    <div v-for="(item, key) in contentData" :key="key" class="col-md-6">
       <iframe
-          class="video-fl video-right mt-lg-5"
-          src="https://www.youtube.com/embed/cquE-PRpFvQ?si=ML3A39xPoYQ1QyzM"
-          title="Инструкция пеликан"
+          class="video-two-col"
+          :src="item.src"
+          :title="item.title"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-      ></iframe>
+          allowfullscreen
+      >
+      </iframe>
     </div>
   </div>
 </template>
