@@ -193,6 +193,6 @@ window.onresize = adjustColspan;
     </tbody>
   </table>
   <div class="text-center">
-    <a class="mt-3 btn btn-outline-danger text-danger hover-success" href="/program.pdf" target="_blank" download="ПМОФ_2024_Лицей_№_369_Программа_конференции.pdf">Скачать программу</a>
+    <a class="mt-3 btn btn-outline-danger text-danger hover-success" href="/other/program.pdf" target="_blank" download="ПМОФ_2024_Лицей_№_369_Программа_конференции.pdf">Скачать программу</a>
   </div>
 </template>
