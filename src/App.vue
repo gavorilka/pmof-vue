@@ -115,6 +115,7 @@ const sendMessage = async () => {
       messageData.message = ''
       messageData.files = null
       messageData.agreement = true
+      document.querySelector('#questionForm').reset()
       console.log('Данные успешно отправлены:', data )
     } else {
       // Обработка ошибки при отправке
@@ -215,7 +216,7 @@ onMounted(() => {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
           </div>
           <div class="modal-body">
-            <form class="row g-3 needs-validation" novalidate>
+            <form id="questionForm" class="row g-3 needs-validation" novalidate>
               <fieldset v-bind:disabled="loading">
                 <div class="mb-3">
                   <label for="questionFio" class="form-label">ФИО</label>
