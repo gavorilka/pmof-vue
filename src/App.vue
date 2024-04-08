@@ -13,6 +13,7 @@ const showToastSuccess = ref(false)
 const showToastError = ref(false)
 const responseMessage = ref('')
 const questionModal = ref(null)
+const loading = ref(false)
 const closeModal = () => Modal.getInstance(questionModal.value)?.hide()
 
 const partnerLogo = [
@@ -76,6 +77,7 @@ const handleFileChange = (event) => {
 }
 
 const sendMessage = async () => {
+  loading.value = true
   const Url = new URL(window.location)
   const url = `${Url.protocol}//${Url.hostname}${Url.port?':'+Url.port:''}/${import.meta.env.VITE_API_PREFIX}/email`
   const formData = new FormData()
@@ -103,9 +105,16 @@ const sendMessage = async () => {
       responseMessage.value = data.message
       showToastSuccess.value = true
       closeModal()
+      loading.value = false
       setTimeout(() => {
         showToastSuccess.value = false
       }, 3000)
+      messageData.name = ''
+      messageData.email = ''
+      messageData.phone = ''
+      messageData.message = ''
+      messageData.files = null
+      messageData.agreement = true
       console.log('Данные успешно отправлены:', data )
     } else {
       // Обработка ошибки при отправке
@@ -207,33 +216,35 @@ onMounted(() => {
           </div>
           <div class="modal-body">
             <form class="row g-3 needs-validation" novalidate>
-              <div class="mb-3">
-                <label for="questionFio" class="form-label">ФИО</label>
-                <input v-model="messageData.name" type="text" class="form-control" id="questionFio" placeholder="Иванов Иван Иванович" pattern="^[А-ЯЁ][а-яё]{1,}\s[А-ЯЁ][а-яё]{1,}(\s[А-ЯЁ][а-яё]{1,})?$" required>
-              </div>
-              <div class="mb-3">
-                <label for="questionEmail" class="form-label">Email</label>
-                <input v-model="messageData.email" type="email" class="form-control" id="questionEmail" placeholder="simple@example.ru" pattern="([A-zА-я])+([0-9\-_\+\.])*([A-zА-я0-9\-_\+\.]){2,}@([A-zА-я])+([0-9\-_\+\.])*([A-zА-я0-9\-_\+\.])*[\.]([A-zА-я])+" required>
-              </div>
-              <div class="mb-3">
-                <label for="questionPhone" class="form-label">Телефон</label>
-                <input v-model="messageData.phone" @input="formatPhone" type="tel" class="form-control" id="questionPhone" placeholder="+7 (880) 555 35 35" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-              </div>
-              <div class="mb-3">
-                <label for="questionText" class="form-label">Вопрос</label>
-                <textarea v-model="messageData.message" @input="validateTextarea" class="form-control" id="questionText" rows="3" pattern="^[А-Яа-яЁё\s\d.,!?:;\-&quot;&apos;&laquo;&raquo;()/\\]+$" placeholder="Вопрос состоит из кириллического текста со знаками препинания и арабскими цифрами" required></textarea>
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="questionFile">Файл</label>
-                <input @change="handleFileChange" type="file" class="form-control" id="questionFile" />
-              </div>
-              <div class="mb-3 form-check">
-                <input v-model="messageData.agreement" type="checkbox" class="form-check-input" id="questionAgreement" required>
-                <label class="form-check-label" for="questionAgreement">Я даю согласие на обработку персональных данных в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных»</label>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">Отправить</button>
-              </div>
+              <fieldset v-bind:disabled="loading">
+                <div class="mb-3">
+                  <label for="questionFio" class="form-label">ФИО</label>
+                  <input v-model="messageData.name" type="text" class="form-control" id="questionFio" placeholder="Иванов Иван Иванович" pattern="^[А-ЯЁ][а-яё]{1,}\s[А-ЯЁ][а-яё]{1,}(\s[А-ЯЁ][а-яё]{1,})?$" required>
+                </div>
+                <div class="mb-3">
+                  <label for="questionEmail" class="form-label">Email</label>
+                  <input v-model="messageData.email" type="email" class="form-control" id="questionEmail" placeholder="simple@example.ru" pattern="([A-zА-я])+([0-9\-_\+\.])*([A-zА-я0-9\-_\+\.]){2,}@([A-zА-я])+([0-9\-_\+\.])*([A-zА-я0-9\-_\+\.])*[\.]([A-zА-я])+" required>
+                </div>
+                <div class="mb-3">
+                  <label for="questionPhone" class="form-label">Телефон</label>
+                  <input v-model="messageData.phone" @input="formatPhone" type="tel" class="form-control" id="questionPhone" placeholder="+7 (880) 555 35 35" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+                </div>
+                <div class="mb-3">
+                  <label for="questionText" class="form-label">Вопрос</label>
+                  <textarea v-model="messageData.message" @input="validateTextarea" class="form-control" id="questionText" rows="3" pattern="^[А-Яа-яЁё\s\d.,!?:;\-&quot;&apos;&laquo;&raquo;()/\\]+$" placeholder="Вопрос состоит из кириллического текста со знаками препинания и арабскими цифрами" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="questionFile">Файл</label>
+                  <input @change="handleFileChange" type="file" class="form-control" id="questionFile" />
+                </div>
+                <div class="mb-3 form-check">
+                  <input v-model="messageData.agreement" type="checkbox" class="form-check-input" id="questionAgreement" required>
+                  <label class="form-check-label" for="questionAgreement">Я даю согласие на обработку персональных данных в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных»</label>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Отправить</button>
+                </div>
+              </fieldset>
             </form>
           </div>
         </div>
