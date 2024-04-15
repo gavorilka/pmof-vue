@@ -44,6 +44,36 @@ const contentData = [
       </div>
     </div>
     <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          #PROурок&#173;РУССКОГО_ЯЗЫКА
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionLesson">
+        <div class="accordion-body">
+          <div><strong>Тема урока: </strong>Буквы О и Е после шипящих и Ц в суффиксах имен прилагательных </div>
+          <div><strong>Учитель: </strong>Зюко Мария Викторовна</div>
+          <div><strong>Класс: </strong>5</div>
+          <a href="https://369.pelikan.online/events/96679/">Смотреть запись</a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+          #PROурок&#173;ЛИТЕРАТУРЫ
+        </button>
+      </h2>
+      <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionLesson">
+        <div class="accordion-body">
+          <div><strong>Тема урока: </strong>М.А. Осоргин. Сочетание реальности и фантастики в рассказе «Пенсне»</div>
+          <div><strong>Учитель: </strong>Ткачева Валентина Николаевна</div>
+          <div><strong>Класс: </strong>8</div>
+          <a href="https://369.pelikan.online/events/96529/">Смотреть запись</a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
       <h2 class="accordion-header" id="headingFour">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
           #PROурокХИМИИ
