@@ -21,5 +21,8 @@
       >
       </iframe>
     </div>
+    <a class="d-block" href="https://www.calameo.com/read/0077579118ea062c7f3ce?page=1">
+      <img class="img-fluid" src="/pic/mediaImEduOrg.png" alt="Медиаимидж образовательной организации">
+    </a>
   </section>
 </template>
